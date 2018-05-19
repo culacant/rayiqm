@@ -71,8 +71,8 @@ void rlLoadAnimatedMesh(AnimatedMesh *amesh, bool dynamic);                     
 void rlDrawAnimatedMesh(AnimatedMesh amesh, Material material, Matrix transform);   // draws the avertices and anormals arrays on the screen
 void rlUnloadAnimatedMesh(AnimatedMesh *amesh);                                     // unloads a mesh and frees all the allocated memory
 void rlUpdateAnimatedMesh(AnimatedMesh *amesh);                                     // updates the avertices and anormals for the mesh
-```
                                                                                     // this uses glBufferSubData for now, might use streaming in the future
+```
 #raymath.h code:
 ```
 Vector3 QuaternionRotateVector(Vector3 v, Quaternion q);                            // rotate the vector by a quaternion
