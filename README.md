@@ -76,9 +76,9 @@ void rlUpdateAnimatedMesh(AnimatedMesh *amesh);                                 
 #raymath.h code:
 ```
 Vector3 QuaternionRotateVector(Vector3 v, Quaternion q);                            // rotate the vector by a quaternion
-
-
+```
 #iqm.h code:
+```
 AnimatedModel LoadIQM(const char *filename);                                        // loads an IQM model from a file, should not be called directly, use LoadAnimatedModel() instead
 AnimatedModel LoadAnimatedModel(const char *filename);                              // loads an IQM model from a file and sets the transform matrix and meshMaterials to default
 AnimatedModel AnimatedModelAddTexture(AnimatedModel model,const char *filename);    // adds a texture to the model
