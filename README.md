@@ -23,6 +23,7 @@ A quick overview of my structs and functions and what they do:
 ==============================================================
 
 #rlgl.h code, the functions here get exposed to the dll/library:
+```
 typedef struct AnimatedMesh
 {
   char name[NAMELEN];             // the name of the animatedmesh, NAMELEN is 32
@@ -70,8 +71,10 @@ void rlLoadAnimatedMesh(AnimatedMesh *amesh, bool dynamic);                     
 void rlDrawAnimatedMesh(AnimatedMesh amesh, Material material, Matrix transform);   // draws the avertices and anormals arrays on the screen
 void rlUnloadAnimatedMesh(AnimatedMesh *amesh);                                     // unloads a mesh and frees all the allocated memory
 void rlUpdateAnimatedMesh(AnimatedMesh *amesh);                                     // updates the avertices and anormals for the mesh
+```
                                                                                     // this uses glBufferSubData for now, might use streaming in the future
 #raymath.h code:
+```
 Vector3 QuaternionRotateVector(Vector3 v, Quaternion q);                            // rotate the vector by a quaternion
 
 
@@ -91,3 +94,4 @@ int SkeletonsMatch(AnimatedModel model, Animation anim);                        
 void AnimateModel(AnimatedModel model, Animation anim, int frame);                    // updates the avertices and anormals of the model according to the requestion in the animation
 void DrawAnimatedmodel(AnimatedModel model,Vector3 position,float scale,Color tint);  // draws the model at position, with scale and tint, calls DrawAnimatedModelex, same thing as raylib
 void DrawAnimatedmodelEx(AnimatedModel model,Vector3 position,Vector3 rotationAxis,float rotationAngle, Vector3 scale,Color tint);    // does some weird stuff, not really sure
+```
